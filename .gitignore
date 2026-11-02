@@ -1,0 +1,67 @@
+# ==========================================
+# 环境与依赖 (Environments & Dependencies)
+# ==========================================
+.env
+.venv
+.venv_*          # ⭐ 专门屏蔽你创建的 .venv_lerobot
+env/
+venv/
+env.bak/
+venv.bak/
+.python-version
+__pypackages__/
+node_modules/
+
+# Lock files
+poetry.lock
+Pipfile.lock
+uv.lock          # ⭐ 屏蔽 uv 的锁文件，本地用就行，不用传
+
+# ==========================================
+# 编译与缓存 (Build & Cached Files)
+# ==========================================
+build/
+dist/
+wheels/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*.so
+.cache/
+.ruff_cache/
+.mypy_cache/
+
+# ==========================================
+# 自定义大型文件 (Custom Large Files) ⭐ 极其重要 ⭐
+# ==========================================
+# 1. 模型权重
+*.pth
+*.pt
+*.ckpt
+
+# 2. Task 1 & 2 采集的专家数据
+*.npz
+
+# 3. LeRobot 输出的视频、评估日志和下载的模型
+outputs/
+videos/
+*.mp4
+act_local_model/
+act_local_model_migrated/
+
+# ==========================================
+# 日志与临时文件 (Logs & Temporary)
+# ==========================================
+logs/
+tmp/
+*.log
+pip-log.txt
+
+# ==========================================
+# IDE 与系统文件 (IDE & OS)
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+task3_lerobot/lerobot/
